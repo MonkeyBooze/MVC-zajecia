@@ -1,1 +1,1 @@
-# MVC-zaj-cia
+# MVC-zajecia
