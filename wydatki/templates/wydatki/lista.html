@@ -1,0 +1,53 @@
+{% extends 'wydatki/base.html' %}
+
+{% block tytul %}Lista wydatków{% endblock %}
+
+{% block tresc %}
+    <h2>Lista wydatków</h2>
+
+    <a href="{% url 'dodaj_wydatek' %}" class="przycisk-dodaj">+ Dodaj nowy wydatek</a>
+
+    <div class="podsumowanie">
+        <h3>Podsumowanie</h3>
+        <p>Suma wszystkich wydatków: <span class="suma-glowna">{{ suma_calkowita }} zł</span></p>
+
+        {% if podsumowanie %}
+            <p><strong>W rozbiciu na kategorie:</strong></p>
+            <ul>
+                {% for pozycja in podsumowanie %}
+                    <li>{{ pozycja.nazwa }}: <strong>{{ pozycja.suma }} zł</strong></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
+    {% if wydatki %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Kategoria</th>
+                    <th>Kwota</th>
+                    <th>Opis</th>
+                    <th>Akcje</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for wydatek in wydatki %}
+                    <tr>
+                        <td>{{ wydatek.data }}</td>
+                        <td>{{ wydatek.get_kategoria_display }}</td>
+                        <td>{{ wydatek.kwota }} zł</td>
+                        <td>{{ wydatek.opis|default:"-" }}</td>
+                        <td class="przyciski">
+                            <a href="{% url 'edytuj_wydatek' wydatek.pk %}">Edytuj</a>
+                            <a href="{% url 'usun_wydatek' wydatek.pk %}" class="usun">Usuń</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Brak wydatków. <a href="{% url 'dodaj_wydatek' %}">Dodaj pierwszy</a>.</p>
+    {% endif %}
+{% endblock %}

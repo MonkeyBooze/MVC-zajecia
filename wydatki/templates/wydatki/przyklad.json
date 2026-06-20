@@ -1,0 +1,72 @@
+[
+  {
+    "model": "wydatki.wydatek",
+    "pk": 1,
+    "fields": {
+      "kategoria": "jedzenie",
+      "kwota": "152.40",
+      "data": "2026-06-15",
+      "opis": "Zakupy w Biedronce"
+    }
+  },
+  {
+    "model": "wydatki.wydatek",
+    "pk": 2,
+    "fields": {
+      "kategoria": "transport",
+      "kwota": "250.00",
+      "data": "2026-06-14",
+      "opis": "Paliwo"
+    }
+  },
+  {
+    "model": "wydatki.wydatek",
+    "pk": 3,
+    "fields": {
+      "kategoria": "mieszkanie",
+      "kwota": "1200.00",
+      "data": "2026-06-10",
+      "opis": "Czynsz za czerwiec"
+    }
+  },
+  {
+    "model": "wydatki.wydatek",
+    "pk": 4,
+    "fields": {
+      "kategoria": "rozrywka",
+      "kwota": "45.00",
+      "data": "2026-06-12",
+      "opis": "Kino"
+    }
+  },
+  {
+    "model": "wydatki.wydatek",
+    "pk": 5,
+    "fields": {
+      "kategoria": "zdrowie",
+      "kwota": "85.50",
+      "data": "2026-06-08",
+      "opis": "Apteka"
+    }
+  },
+  {
+    "model": "wydatki.wydatek",
+    "pk": 6,
+    "fields": {
+      "kategoria": "jedzenie",
+      "kwota": "67.20",
+      "data": "2026-06-05",
+      "opis": "Warzywa na targu"
+    }
+  },
+  {
+    "model": "wydatki.wydatek",
+    "pk": 7,
+    "fields": {
+      "kategoria": "inne",
+      "kwota": "30.00",
+      "data": "2026-06-03",
+      "opis": "Prezent"
+    }
+  }
+]

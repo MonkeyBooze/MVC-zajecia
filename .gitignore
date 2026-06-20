@@ -2,20 +2,26 @@
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
+.Python
+*.egg-info/
+.installed.cfg
+*.egg
 
 # wirtualne srodowisko
 venv/
 env/
 .venv/
 
-# Django
+# baza danych
 *.sqlite3
 db.sqlite3
-*.log
 
 # IDE
-.idea/
 .vscode/
+.idea/
+*.swp
+*.swo
 
 # system
 .DS_Store

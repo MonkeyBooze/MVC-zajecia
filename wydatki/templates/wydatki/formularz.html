@@ -1,0 +1,14 @@
+{% extends 'wydatki/base.html' %}
+
+{% block tytul %}{{ tytul }}{% endblock %}
+
+{% block tresc %}
+    <h2>{{ tytul }}</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="submit">Zapisz</button>
+        <a href="{% url 'lista_wydatkow' %}">Anuluj</a>
+    </form>
+{% endblock %}
